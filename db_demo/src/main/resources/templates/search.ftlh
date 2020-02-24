@@ -23,16 +23,17 @@
 <nav>
     <div class="nav-wrapper">
         <div class="input-field">
-        <form method="get" action="/search">
-            <div class="input-field">
-                <input name="user" id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
-            </div>
-        </form>
+            <form method="get" action="/search">
+                <div class="input-field">
+                    <input name="user" id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
         </div>
     </div>
 </nav>
+
 <#list notes as note>
     <div class="col s12 m7 size-card">
         <div class="card horizontal">
@@ -51,18 +52,8 @@
             </div>
         </div>
     </div>
+
 </#list>
-<#if pages?? && pages != 0>
-    <nav >
-        <ul class="pagination">
-            <#list 1..pages as page>
-                <li>
-                    <a class="active" href="/posts?page=${page}">${page}</a>
-                </li>
-            </#list>
-        </ul>
-    </nav>
-</#if>
 
 </body>
 </html>

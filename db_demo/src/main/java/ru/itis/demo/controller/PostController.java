@@ -30,9 +30,10 @@ public class PostController {
     }
 
     @GetMapping("/search")
-    public String searchByUser(Model model, @RequestParam(defaultValue = "1", required = false) Integer page,@RequestParam(name = "user") String name) {
-        model.addAttribute("notes", postServiceImpl.find(name, page));
-        return "posts";
+    public String searchByUser(Model model, @RequestParam(defaultValue = "0", required = false) Integer page,@RequestParam(name = "user") String user) {
+        model.addAttribute("notes", postServiceImpl.findByUserContaining(user, page));
+        System.out.println(postServiceImpl.findByUserContaining(user, page));
+        return "search";
     }
 
     @GetMapping("/posts")

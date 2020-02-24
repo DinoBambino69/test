@@ -25,7 +25,7 @@
         <div class="input-field">
         <form method="get" action="/search">
             <div class="input-field">
-                <input name="name" id="search" type="search" required>
+                <input name="user" id="search" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
             </div>
@@ -33,7 +33,6 @@
         </div>
     </div>
 </nav>
-
 <#list notes as note>
     <div class="col s12 m7 size-card">
         <div class="card horizontal">
@@ -52,10 +51,7 @@
             </div>
         </div>
     </div>
-
 </#list>
-
-
 <#if pages?? && pages != 0>
     <nav >
         <ul class="pagination">
