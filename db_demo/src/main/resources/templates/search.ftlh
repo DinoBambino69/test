@@ -16,7 +16,7 @@
         <a href="#" class="brand-logo">Main</a>
         <ul class="right hide-on-and-down">
             <li><a href="/add/post">Send Post</a></li>
-            <li><a href="#">All Posts</a></li>
+            <li><a href="/posts">All Posts</a></li>
         </ul>
     </div>
 </nav>

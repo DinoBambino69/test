@@ -32,7 +32,6 @@ public class PostServiceImpl implements PostService {
     }
 
     public List<Post> findByUserContaining(String user, int page) {
-        System.out.println(postRepository.findAll().size());
-        return postRepository.findAllByUserContaining("%" + user + "%", PageRequest.of(page, 5)).toList();
+        return postRepository.findAllByUserContaining(user, PageRequest.of(page, 5)).toList();
     }
 }
